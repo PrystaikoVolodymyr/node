@@ -56,65 +56,6 @@ const b2000=__dirname+`/people/2000`
 //     }
 // })
 
-// fs.readdir(g1800,(err, files) => {
-//     if (err){
-//         console.log(err)
-//     }
-//     // console.log(files)
-//     files.forEach(fileName=>{
-//         // console.log(fileName)
-//         fs.readFile(g1800+`/${fileName}`,(err1, data) => {
-//             if (err1){
-//                 console.log(err1)
-//                 return
-//             }
-//             let person=JSON.parse(data)
-//             console.log(person)
-//             if (person.gender==="female"){
-//                 console.log(`female `+fileName)
-//             }else if (person.gender==="male") {
-//                 console.log(`male `+fileName)
-//                 fs.rename(g1800+`/${fileName}`,b2000+`/${fileName}`,err2 => {
-//                     if (err2){
-//                         console.log(err2)
-//                     }
-//                 })
-//             }
-//         })
-//
-//     })
-// })
-//
-// fs.readdir(b2000,(err, files) => {
-//     if (err){
-//         console.log(err)
-//     }
-//     // console.log(files)
-//     files.forEach(fileName=>{
-//         // console.log(fileName)
-//         fs.readFile(b2000+`/${fileName}`,(err1, data) => {
-//             if (err1){
-//                 console.log(err1)
-//                 return
-//             }
-//             let person=JSON.parse(data)
-//             console.log(person)
-//             if (person.gender==="male"){
-//                 console.log(`male `+fileName)
-//             }else if (person.gender==="female") {
-//                 console.log(`female `+fileName)
-//                 fs.rename(b2000+`/${fileName}`,g1800+`/${fileName}`,err2 => {
-//                     if (err2){
-//                         console.log(err2)
-//                     }
-//                 })
-//             }
-//         })
-//
-//     })
-// })
-
-
 function personeGender(directory){
     fs.readdir(directory,(err, files) => {
     if (err){
