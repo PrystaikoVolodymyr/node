@@ -27,11 +27,10 @@ function getFile(dir,daughterEll) {
                 if (stats.isDirectory()){
                     getFile(filePath,fileName)
                 }else {
-                    console.log(`this file mast REMOVE`)//зараз все супер працює, як тільки  розкоменчу fs.rename одразу бє помилку, що роблю не так
-
-                    // fs.rename(path.join(filePath,`${fileName}`),path.join(__dirname,`${allFiles}`,`${fileName}`),err2 => {
-                    //     console.log(err2)
-                    // })
+                    console.log(`this file mast REMOVE`)
+                    fs.rename(path.join(filePath,`${fileName}`),path.join(__dirname,`allfiles`,`${fileName}`),err2 => {
+                        console.log(err2)
+                    })
                 }
             })
         })
