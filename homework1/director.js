@@ -26,12 +26,13 @@ function getFile(dir,daughterEll) {
                 console.log(stats.isDirectory())
                 if (stats.isDirectory()){
                     getFile(filePath,fileName)
-                }else {
+                    return;
+                }
                     console.log(`this file mast REMOVE`)
                     fs.rename(path.join(filePath,`${fileName}`),path.join(__dirname,`allfiles`,`${fileName}`),err2 => {
                         console.log(err2)
                     })
-                }
+
             })
         })
     })
