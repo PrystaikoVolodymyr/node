@@ -74,7 +74,7 @@ function personeGender(directory){
                         console.log(err2)
                     }
                 })
-            }else if (person.gender==="male") {
+            }else if (person.gender==="male") {//використав else if бо можливо в когось не буде gender або gender не відомий
                 fs.rename(directory+`/${fileName}`,b2000+`/${fileName}`,err2 => {
                     if (err2){
                         console.log(err2)
