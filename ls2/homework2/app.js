@@ -78,7 +78,7 @@ app.post(`/register`,(req, res) => {
 
 
 app.get(`/login`,(req, res) => {
-    res.render(`login`)
+    res.render(`login`,)
 })
 app.post(`/login`,(req, res) => {
     if (users.find(user => user.email===req.body.email && user.password===req.body.password)){
@@ -88,6 +88,5 @@ app.post(`/login`,(req, res) => {
         res.json(`Go to REGISTER`)
     }
 })
-
 
 
