@@ -19,7 +19,9 @@
 
 const fs = require('fs');
 const path = require('path');
+// eslint-disable-next-line import/no-unresolved
 const express = require('express');
+// eslint-disable-next-line import/no-unresolved
 const expressHbs = require('express-handlebars');
 
 const app = express();
