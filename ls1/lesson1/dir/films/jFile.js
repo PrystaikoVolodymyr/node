@@ -1,16 +1,17 @@
-const name=`Vova`
-const age=`19`
+const name = 'Vova';
+const age = '19';
 
 function consoller(string) {
-    console.log(string)
+    console.log(string);
 }
 
-function fullName(name,age) {
-    consoller(`Hello.. my name is ${name}...I have ${age}`)
+// eslint-disable-next-line no-shadow
+function fullName(name, age) {
+    consoller(`Hello.. my name is ${name}...I have ${age}`);
 }
- console.log(2222)
-module.exports={
+console.log(2222);
+module.exports = {
     name,
     age,
     fullName
-}
+};

@@ -6,13 +6,14 @@
 // console.log(__dirname)//шлях до дерикторії
 // console.log(__filename)//шлях до файлу
 // console.log(process)
-// console.log(`=======`)
+// // console.log(`=======`)
+//
+// const fs = require('fs');// підключення файлової системи для роботи з файлами і папками
+// const path = require('path');// підключення бібліотеки
+//
+// const filePath = `${__dirname}/dir/filepath.txt`;
 
-const fs=require(`fs`)//підключення файлової системи для роботи з файлами і папками
-const path=require(`path`)//підключення бібліотеки
-
-const filePath=__dirname+`/dir/filepath.txt`
-
+// eslint-disable-next-line max-len
 // fs.writeFile(filePath,`HEElll`,err => {//створюємо файл по шляху filePath (data - вміст файлу)(кожного разу кли викликаємо,файл переписується)
 //     if (err){
 //         console.log(err)
@@ -30,6 +31,7 @@ const filePath=__dirname+`/dir/filepath.txt`
 //     console.log(data.toString())
 // })
 
+// eslint-disable-next-line max-len
 // fs.mkdir(__dirname+`/dir/films/trailer`,{recursive:true},err => {//створення нової деректорії(recursive:true- рекурсивно створює,якщо немає попередгьої стврює її(йде з кінця))
 //     if (err){
 //         console.log(err)
@@ -42,8 +44,9 @@ const filePath=__dirname+`/dir/filepath.txt`
 //     }
 // })
 
-const dirName=__dirname+`/dir`//шлях до бажаної директорії
+// const dirName = `${__dirname}/dir`;// шлях до бажаної директорії
 
+// eslint-disable-next-line max-len
 // fs.readdir(dirName,(err, files) => {//зчитує директорію, показує які файли чи папки в ній є,без вложеності(лише перший рівень) і вертається масив
 //     if (err){
 //         console.log(err)
@@ -79,4 +82,3 @@ const dirName=__dirname+`/dir`//шлях до бажаної директорі�
 //         console.log(err)
 //     }
 // })
-
