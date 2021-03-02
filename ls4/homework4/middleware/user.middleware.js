@@ -10,7 +10,7 @@ module.exports = {
             } = req.body;
 
             if (!name || !age) {
-                throw new Error('Some field is empty');
+                throw new Error(errorMessages.EMPTY_FIELD[language]);
             } if (age < 18) {
                 throw new Error(errorMessages.BAD_AGE[language]);
             } if (await User.findOne({ name })) {
@@ -27,7 +27,7 @@ module.exports = {
             const userId = req.params;
 
             if (userId.length < 26) {
-                throw new Error(errorMessages.BAD_AGE[1]);
+                throw new Error(errorMessages.BAD_ID[0]);
             }
 
             await next();
