@@ -1,5 +1,6 @@
 const errorCodes = require('../constants/errorCode.enam');
 const errorMessages = require('../error/error.messeges');
+const User = require('../dataBase/models/User');
 
 module.exports = {
     async isUserValid(req, res, next) {
@@ -12,8 +13,24 @@ module.exports = {
                 throw new Error('Some field is empty');
             } if (age < 18) {
                 throw new Error(errorMessages.BAD_AGE[language]);
+            } if (await User.findOne({ name })) {
+                throw new Error(errorMessages.BAD_EMAIL[language]);
             }
-           await next();
+
+            await next();
+        } catch (e) {
+            res.status(errorCodes.BAD_REQUEST).json(e.message);
+        }
+    },
+    async isIdValid(req, res, next) {
+        try {
+            const userId = req.params;
+
+            if (userId.length < 26) {
+                throw new Error(errorMessages.BAD_AGE[1]);
+            }
+
+            await next();
         } catch (e) {
             res.status(errorCodes.BAD_REQUEST).json(e.message);
         }
